@@ -33,7 +33,8 @@
 
                     <tr th:each="cartItem:${cart.cartItems}">
                         <td>
-                            <a th:href="'/catalog/viewItem?itemId='+${cartItem.item.itemId}" th:text="${cartItem.item.itemId}"></a>
+                            <a th:href="'/catalog/viewItem?itemId='+${cartItem.item.itemId}"
+                               th:text="${cartItem.item.itemId}"></a>
                         </td>
                         <td th:text="${cartItem.item.product.productId}"></td>
                         <td th:text="${cartItem.item.attribute1}+${cartItem.item.product.name}"></td>
@@ -44,7 +45,8 @@
                         <td th:text="'$'+${#numbers.formatDecimal(cartItem.item.listPrice,1,2)}"></td>
                         <td th:text="'$'+${#numbers.formatDecimal(cartItem.total,1,2)}"></td>
                         <td>
-                            <a class="Button" th:href="'/cart/removeItemFromCart?workingItemId='+${cartItem.item.itemId}">Remove</a>
+                            <a class="Button"
+                               th:href="'/cart/removeItemFromCart?workingItemId='+${cartItem.item.itemId}">Remove</a>
                         </td>
                     </tr>
 
@@ -64,12 +66,13 @@
         </div>
         <div id="MyList" th:if="(${session.account} != null) and (${session.authenticated})">
             <div th:if="${session.account.listOption}">
-                <p>Pet Favorites <br />
+                <p>Pet Favorites <br/>
                     Shop for more of your favorite pets here.
                 </p>
                 <ul>
                     <li th:each="product:${session.myList}">
-                        <a th:href="'/catalog/viewProduct?productId='+${product.productId}" th:text="${product.productId}"></a>
+                        <a th:href="'/catalog/viewProduct?productId='+${product.productId}"
+                           th:text="${product.productId}"></a>
                     </li>
                 </ul>
             </div>

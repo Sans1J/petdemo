@@ -11,31 +11,31 @@
 
 </div>
 
-    <div id="Content">
-        <div id="Catalog">
-            <h2 th:text="${category.name}">Category的name属性</h2>
-            <table>
-                <tr>
-                    <th>Product ID</th>
-                    <th>Name</th>
-                </tr>
+<div id="Content">
+    <div id="Catalog">
+        <h2 th:text="${category.name}">Category的name属性</h2>
+        <table>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+            </tr>
 
-                <tr th:each="product:${productList}">
-                    <td th:text="${product.productId}">productId</td>
-                    <td th:text="${product.name}">Product Name</td>
-                </tr>
-<!--                <c:forEach var="product" items="${sessionScope.productList}">-->
-<!--                    <tr>-->
-<!--                        <td>-->
-<!--                            <a href="Product?productId=${product.productId}">${product.productId}</a>-->
-<!--                        </td>-->
-<!--                        <td>${product.name}</td>-->
-<!--                    </tr>-->
-<!--                </c:forEach>-->
-            </table>
+            <tr th:each="product:${productList}">
+                <td th:text="${product.productId}">productId</td>
+                <td th:text="${product.name}">Product Name</td>
+            </tr>
+            <!--                <c:forEach var="product" items="${sessionScope.productList}">-->
+            <!--                    <tr>-->
+            <!--                        <td>-->
+            <!--                            <a href="Product?productId=${product.productId}">${product.productId}</a>-->
+            <!--                        </td>-->
+            <!--                        <td>${product.name}</td>-->
+            <!--                    </tr>-->
+            <!--                </c:forEach>-->
+        </table>
 
-        </div>
     </div>
+</div>
 <div th:replace="common/bottom">
 
 </div>
